@@ -25,67 +25,12 @@ Functions:
 ```
 set_pwm_freq(freq) 
 ```
-Set the PWM frequency
-**Parameters:** freq - required frequency  
-**Returns:** null
-
-```
-set_pwm(channel, on, off) 
-```
-Set the output on single channels
-**Parameters:** channel - 1 to 16, on - time period, off - time period
-**Returns:** null
-
-
-```
-set_all_pwm( on, off) 
-```
-Set the output on all channels
-**Parameters:** on - time period, off - time period
-**Returns:** null
-
-```
-output_disable()
-```
-Disable the output via OE pin
-**Parameters:** null
-**Returns:** null
-
-```
-output_enable()
-```
-Enable the output via OE pin
-**Parameters:** null
-**Returns:** null
-
-```
-set_allcall_address(address)
-```
-Set the I2C address for the All Call function
-**Parameters:** address
-**Returns:** null
-
-```
-enable_allcall_address()
-```
-Enable the I2C address for the All Call function
-**Parameters:** null
-**Returns:** null
-
-```
-disable_allcall_address()
-```
-Disable the I2C address for the All Call function
-**Parameters:** null
-**Returns:** null
-
-
 
 Usage
 ====
 
 To use the Servo Pi program you must to configurate the dictionary with the configuration servo robot on nanoconfig_servo.py file:
-```
+
 ergo_servo_config = {
     
     'motors': {
