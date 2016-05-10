@@ -24,12 +24,12 @@ Functions:
 
 ```
 set_pwm_freq(freq) 
-```
 
 Usage
 ====
 
 To use the Servo Pi program you must to configurate the dictionary with the configuration servo robot on nanoconfig_servo.py file:
+```
 
 ergo_servo_config = {
     
