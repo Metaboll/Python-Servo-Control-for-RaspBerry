@@ -33,7 +33,7 @@ class servo_robot(object):
 
 		while (True):
 			
-			a = [ -180, 100 ]# values in sexa grades
+			a = [ -180, 100 ]# pulses
 			self.goto_dic_position(a)
 			time.sleep(1)
 			
