@@ -33,15 +33,15 @@ class servo_robot(object):
 
 		while (True):
 			
-			a = [ -180, 100 ]# pulses
+			a = [ 300, 450 ]# pulses
 			self.goto_dic_position(a)
 			time.sleep(1)
 			
-			a = [ 0, 140 ]
+			a = [ 450, 450 ]
 			self.goto_dic_position(a)
 			time.sleep(1)
 
-			a = [ 180, 100 ]
+			a = [ 600, 450 ]
 			self.goto_dic_position(a)
 			time.sleep(1)
 
