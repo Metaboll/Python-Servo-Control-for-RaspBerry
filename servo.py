@@ -58,7 +58,7 @@ class servo_robot(object):
 		#time.sleep(2)	
 
 
-	def goto_dic_position(  self, my_array, f = 0 ):
+	def goto_dic_position_anu(  self, my_array, f = 0 ):
 		item = 0
 		
 		for key, value in self.servo_robot["motors"].iteritems():
@@ -82,4 +82,23 @@ class servo_robot(object):
 			#print new_value_servo
 			self.pwm.set_pwm(num_servo, 0, new_value_servo)
 
-
+	def goto_dic_position(  self, my_array, f = 0 ): #my_arry [ pulse length out of 4096 , ... ]
+		item = 0
+		
+		for key, value in self.servo_robot["motors"].iteritems():
+			grade_servo = my_array[item] # en grados
+			
+			max_value_servo = value["max"]
+			min_value_servo = value["min"]	
+			
+			if grade_servo < min_value_servo:
+					grade_servo = min_value_servo
+			if grade_servo > max_value_servo:
+					grade_servo = max_value_servo
+			# -180 es 100
+			# 0 es 400
+			# 180 es 700
+			item += 1
+			num_servo = value["servo"]
+			#print new_value_servo
+			self.pwm.set_pwm(num_servo, 0, grade_servo)
